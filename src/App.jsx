@@ -45,17 +45,17 @@ export default function App() {
 
   let status = (
     <>
-      Turn: <span className={isXNext ? "status-x" : "status-o"}>{isXNext ? "X" : "O"}</span>
+      Turno de <span className={isXNext ? "status-x" : "status-o"}>{isXNext ? "X" : "O"}</span>
     </>
   );
   if (winner) {
     status = (
       <>
-        <span className={winner.player === "X" ? "status-x" : "status-o"}>{winner.player}</span> wins!
+        ¡Gana <span className={winner.player === "X" ? "status-x" : "status-o"}>{winner.player}</span>!
       </>
     );
   } else if (isDraw) {
-    status = "It's a draw!";
+    status = "¡Empate!";
   }
 
   return (
@@ -64,23 +64,23 @@ export default function App() {
         <header className="game-header">
           <div className="eyebrow">
             <span className="eyebrow-dot" />
-            A CLASSIC FOR TWO
+            UN CLÁSICO PARA DOS
           </div>
-          <h1>Tic-Tac-Toe<span>.</span></h1>
-          <p>A quick game. Who will get three in a row?</p>
+          <h1>Tres en raya<span>.</span></h1>
+          <p>Una partida rápida. ¿Quién pondrá tres en línea?</p>
         </header>
 
-        <section className="game" aria-label="Tic-Tac-Toe game">
+        <section className="game" aria-label="Partida de tres en raya">
           <div className="game-topline">
-            <div className="players" aria-label="Players">
+            <div className="players" aria-label="Jugadores">
               <div className={`player player-x ${isXNext && !winner && !isDraw ? "player-active" : ""}`}>
                 <span className="player-mark">×</span>
-                <span>Player 1</span>
+                <span>Jugador 1</span>
               </div>
               <span className="versus">VS</span>
               <div className={`player player-o ${!isXNext && !winner && !isDraw ? "player-active" : ""}`}>
                 <span className="player-mark">○</span>
-                <span>Player 2</span>
+                <span>Jugador 2</span>
               </div>
             </div>
             <div className={`status ${winner ? "status-won" : ""}`} aria-live="polite">
@@ -88,7 +88,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className="board" role="group" aria-label="Game board">
+          <div className="board" role="group" aria-label="Tablero">
             {squares.map((square, index) => {
               const isWinningSquare = winningSquares.includes(index);
               return (
@@ -98,7 +98,7 @@ export default function App() {
                   key={index}
                   onClick={() => playSquare(index)}
                   disabled={Boolean(square) || Boolean(winner) || isDraw}
-                  aria-label={`Square ${index + 1}${square ? `, ${square}` : ", empty"}`}
+                  aria-label={`Casilla ${index + 1}${square ? `, ${square}` : ", vacía"}`}
                 >
                   {square && <span aria-hidden="true">{square === "X" ? "×" : "○"}</span>}
                 </button>
@@ -108,23 +108,23 @@ export default function App() {
 
           <button className="reset-button" type="button" onClick={resetGame}>
             <span aria-hidden="true">↻</span>
-            {winner || isDraw ? "Play again" : "New game"}
+            {winner || isDraw ? "Jugar de nuevo" : "Reiniciar partida"}
           </button>
         </section>
 
         <footer className="game-footer">
           <div className="footer-message">
             <span className="footer-line" />
-            <p>Three in a row wins.</p>
+            <p>¿Hasta qué nivel puedes llegar?</p>
             <span className="footer-line" />
           </div>
           <a
             className="creator-link"
-            href="https://github.com/cesarchamal"
+            href="https://github.com/Cesarkubanski"
             target="_blank"
             rel="noreferrer"
           >
-            Made by cesarchamal
+            Hecho por Cesarkubanski
           </a>
         </footer>
       </div>

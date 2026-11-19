@@ -9,7 +9,7 @@ if (import.meta.env.PROD && "serviceWorker" in navigator) {
       scope: import.meta.env.BASE_URL,
     })
     .catch((error) => {
-      console.error("Could not register the service worker:", error);
+      console.error("No se pudo registrar el service worker:", error);
     });
 }
 

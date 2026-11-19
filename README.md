@@ -1,66 +1,62 @@
-# Tic-Tac-Toe
+# Tres en raya
 
-A two-player Tic-Tac-Toe game built with React and Vite.
+Juego de tres en raya para dos personas, creado con React y Vite.
 
-## Requirements
+## Requisitos
 
-- Node.js and npm
+- Node.js y npm
 
-## Install and run
+## Instalación y desarrollo
 
-From the project directory, run:
+Desde la carpeta del proyecto, ejecuta:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the URL printed by Vite in your browser (usually `http://localhost:5173/`).
+Abre en el navegador la dirección que indique Vite (normalmente `http://localhost:5173/`).
 
-## How to play
+## Cómo jugar
 
-- Two players take turns. X goes first, followed by O.
-- Select an empty square to place your mark.
-- Get three marks in a horizontal, vertical, or diagonal line to win.
-- If all squares are filled without a winner, the game is a draw.
-- Select **New game** to start over.
+- Dos jugadores se turnan: X empieza y luego juega O.
+- Selecciona una casilla vacía para colocar tu símbolo.
+- Gana quien consiga tres símbolos en línea, horizontal, vertical o diagonalmente.
+- Si se ocupan todas las casillas sin ganador, la partida termina en empate.
+- Pulsa **Reiniciar partida** para empezar de nuevo.
 
-## Production build
+## Compilar para producción
 
 ```bash
 npm run build
 ```
 
-Vite writes the production files to `dist/`. To preview the build locally:
+Vite genera los archivos de producción en `dist/`. Para probar esa compilación localmente:
 
 ```bash
 npm run preview
 ```
 
-## Install as an app (PWA)
+## Instalar como aplicación (PWA)
 
-You can install the app from a supported browser. After your first visit, it caches the interface so you can open it offline.
+La aplicación puede instalarse desde un navegador compatible y guarda en caché la interfaz para abrirla sin conexión después de la primera visita.
 
-- On Android or desktop, open the deployed site in Chrome or Edge and select **Install app** from the browser menu.
-- On iPhone or iPad, open the site in Safari, tap **Share**, and select **Add to Home Screen**.
-- The service worker is enabled in production builds, not during development (`npm run dev`).
+- En Android o escritorio, abre el sitio publicado en Chrome o Edge y selecciona **Instalar aplicación** en el menú del navegador.
+- En iPhone o iPad, abre el sitio en Safari, pulsa **Compartir** y selecciona **Añadir a pantalla de inicio**.
+- La instalación del service worker ocurre en la compilación de producción; en desarrollo (`npm run dev`) no se activa.
 
-## Deploy to Vercel
+## Publicar en Vercel paso a paso
 
-1. Push the project to a GitHub repository.
-2. Sign in to [vercel.com](https://vercel.com) with your GitHub account.
-3. Select **Add New → Project**.
-4. Find the `tic-tac-toe` repository and select **Import**. If it does not appear, grant Vercel access to the repository in your GitHub settings.
-5. Select **Vite** as the framework if Vercel does not detect it automatically. Use:
+1. Sube el proyecto a un repositorio de GitHub.
+2. Entra en [vercel.com](https://vercel.com) e inicia sesión con tu cuenta de GitHub.
+3. En el panel, pulsa **Add New → Project**.
+4. Busca el repositorio `tic-tac-toe` y pulsa **Import**. Si no aparece, concede a Vercel acceso al repositorio desde la configuración de GitHub.
+5. En la configuración del proyecto, selecciona **Vite** como framework si no se detecta automáticamente. Usa:
    - **Build Command:** `npm run build`
    - **Output Directory:** `dist`
    - **Install Command:** `npm install`
-6. Select **Deploy** and wait for the build to finish.
-7. Open the domain Vercel provides. You can install the PWA from there.
+6. Pulsa **Deploy** y espera a que termine la compilación.
+7. Abre el dominio que Vercel muestra al finalizar. Desde ahí podrás instalar la PWA.
 
-Vercel automatically redeploys the app when you push changes to the connected GitHub branch.
-
-## Author
-
-Made by [cesarchamal](https://github.com/cesarchamal).
+Vercel volverá a desplegar la aplicación automáticamente cuando subas cambios a la rama conectada de GitHub.
 
