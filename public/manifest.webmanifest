@@ -1,7 +1,7 @@
 {
-  "name": "Tres en raya",
-  "short_name": "Tres en raya",
-  "description": "Juega al tres en raya con otra persona, incluso sin conexión.",
+  "name": "Tic-Tac-Toe",
+  "short_name": "Tic-Tac-Toe",
+  "description": "Play Tic-Tac-Toe with a friend, even offline.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
