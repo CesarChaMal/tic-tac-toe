@@ -60,3 +60,7 @@ La aplicación puede instalarse desde un navegador compatible y guarda en caché
 
 Vercel volverá a desplegar la aplicación automáticamente cuando subas cambios a la rama conectada de GitHub.
 
+## Autor
+
+Hecho por [cesarchamal](https://github.com/cesarchamal).
+

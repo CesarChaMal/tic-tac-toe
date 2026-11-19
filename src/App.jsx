@@ -120,11 +120,11 @@ export default function App() {
           </div>
           <a
             className="creator-link"
-            href="https://github.com/Cesarkubanski"
+            href="https://github.com/cesarchamal"
             target="_blank"
             rel="noreferrer"
           >
-            Hecho por Cesarkubanski
+            Hecho por cesarchamal
           </a>
         </footer>
       </div>
